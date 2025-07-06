@@ -59,7 +59,7 @@ const Navigation = () => {
               animate={{ opacity: 1 }}
               className="text-2xl font-bold text-gray-900"
             >
-              Portfolio
+              SamratDev
             </motion.div>
 
             {/* Desktop Navigation */}

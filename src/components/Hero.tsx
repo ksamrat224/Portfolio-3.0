@@ -33,7 +33,7 @@ const FallbackSphere = () => {
 };
 
 const Hero = () => {
-  const skills = ['Full Stack Developer', 'React Specialist', 'UI/UX Designer', 'Tech Enthusiast'];
+  const skills = ['Cross-Platform App Developer','React & Laravel Developer', 'Tech Enthusiast'];
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
@@ -55,7 +55,7 @@ const Hero = () => {
             >
               Hi, I'm{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-                John Doe
+                Samrat Karki
               </span>
             </motion.h1>
             

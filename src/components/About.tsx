@@ -55,9 +55,7 @@ const About = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">About Me</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              I'm a passionate full-stack developer with over 5 years of experience creating 
-              digital solutions that make a difference. I love turning complex problems into 
-              simple, beautiful designs.
+          I'm a full-stack developer with 2 years of experience. I enjoy building web and mobile apps using React, React Native, NestJS, and Laravel. I like turning ideas into simple and useful solutions that solve real problems.
             </p>
           </div>
 
@@ -69,15 +67,9 @@ const About = () => {
             >
               <h3 className="text-2xl font-bold text-gray-900 mb-6">My Journey</h3>
               <p className="text-gray-600 mb-4">
-                Started as a curious computer science student, I've evolved into a versatile 
-                developer who bridges the gap between technical functionality and user experience. 
-                My journey has taken me through various technologies and methodologies.
+             I started as a curious computer science student, and that curiosity turned into a passion for building real-world apps. I've worked with React, React Native, NestJS, and Laravel—learning by doing. I love solving problems and turning ideas into clean, functional products. When I’m not coding, I’m usually tinkering with my laptop or scrolling through tech Twitter.
               </p>
-              <p className="text-gray-600 mb-6">
-                I believe in continuous learning and staying updated with the latest technologies. 
-                When I'm not coding, you'll find me exploring new frameworks, contributing to 
-                open-source projects, or mentoring junior developers.
-              </p>
+             
               
               <h4 className="text-xl font-semibold text-gray-900 mb-4">Technical Skills</h4>
               <div className="space-y-4">

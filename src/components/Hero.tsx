@@ -17,7 +17,6 @@ const FallbackSphere = () => {
         }}
         className="w-64 h-64 rounded-full bg-gradient-to-br from-gray-800 to-gray-900 opacity-90 relative overflow-hidden border-4 border-gray-700 shadow-2xl"
       >
-        {/* Profile image inside the sphere - no rotation */}
         <div className="absolute inset-0 flex items-center justify-center">
           <img
             src={"public/p.jpg"}
@@ -25,7 +24,6 @@ const FallbackSphere = () => {
             className="w-48 h-48 rounded-full object-cover border-4 border-gray-600"
           />
         </div>
-        {/* Overlay gradient for effect */}
         <div className="absolute inset-0 bg-gradient-to-br from-gray-800/30 to-transparent rounded-full" />
       </motion.div>
     </div>
@@ -85,9 +83,7 @@ const Hero = () => {
               transition={{ delay: 0.6, duration: 0.8 }}
               className="text-lg text-gray-400 mb-8 max-w-2xl"
             >
-              Never hurt others, learn about science, universe and it's inception
-              aim to solve a particular hard thing in life that's my entire life
-              goal
+             "Never hurt others. Learn about science, the universe, and its inception. Aim to solve a particularly hard problem in life. That is my entire life goal."
             </motion.p>
 
             <motion.div

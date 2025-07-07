@@ -11,12 +11,12 @@ const About = () => {
   });
 
   const skills = [
-    { name: 'JavaScript', percentage: 95 },
-    { name: 'React', percentage: 92 },
-    { name: 'TypeScript', percentage: 88 },
-    { name: 'Node.js', percentage: 85 },
-    { name: 'Python', percentage: 80 },
-    { name: 'UI/UX Design', percentage: 87 },
+    { name: 'JavaScript', percentage: 90 },
+    { name: 'React', percentage: 85 },
+    { name: 'ReactNative', percentage: 80 },
+    { name: 'NestJs', percentage: 75 },
+    { name: 'Laravel', percentage: 80 },
+    
   ];
 
   const features = [

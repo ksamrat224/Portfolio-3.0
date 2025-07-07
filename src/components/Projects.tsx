@@ -185,7 +185,8 @@ const Projects = () => {
             transition={{ delay: 0.6, duration: 0.8 }}
             className="bg-gray-50 rounded-lg p-8"
           >
-            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">GitHub Contributions</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-2 text-center">Proof of Work</h3>
+            <p className='text-lg font-semibold text-gray-900 mb-6 text-center'>All the work I have done so far in public && people's appreciation</p>
             <div className="flex justify-center">
               <GitHubCalendar
                 username="ksamrat224"

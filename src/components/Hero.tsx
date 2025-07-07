@@ -1,19 +1,19 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import TypewriterEffect from './TypewriterEffect';
-import { ChevronDown } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import TypewriterEffect from "./TypewriterEffect";
+import { ChevronDown } from "lucide-react";
 
 const FallbackSphere = () => {
   return (
     <div className="w-full h-full flex items-center justify-center">
       <motion.div
-        animate={{ 
-          scale: [1, 1.1, 1]
+        animate={{
+          scale: [1, 1.1, 1],
         }}
-        transition={{ 
+        transition={{
           duration: 4,
           repeat: Infinity,
-          ease: "easeInOut"
+          ease: "easeInOut",
         }}
         className="w-64 h-64 rounded-full bg-gradient-to-br from-gray-800 to-gray-900 opacity-90 relative overflow-hidden border-4 border-gray-700 shadow-2xl"
       >
@@ -33,12 +33,19 @@ const FallbackSphere = () => {
 };
 
 const Hero = () => {
-  const skills = ['Cross-Platform App Developer','React & Laravel Developer', 'Tech Enthusiast'];
+  const skills = [
+    "Cross-Platform App Developer",
+    "React & Laravel Developer",
+    "Tech Enthusiast",
+  ];
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section
+      id="home"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden"
+    >
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-black" />
-      
+
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -53,56 +60,65 @@ const Hero = () => {
               transition={{ delay: 0.2, duration: 0.8 }}
               className="text-5xl lg:text-7xl font-bold text-white mb-6"
             >
-              Hi, I'm{' '}
+              Hi, I'm{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
                 Samrat Karki
               </span>
             </motion.h1>
-            
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
               className="text-2xl lg:text-3xl text-gray-300 mb-8"
             >
-              I'm a{' '}
-              <TypewriterEffect 
-                words={skills} 
+              I'm a{" "}
+              <TypewriterEffect
+                words={skills}
                 className="text-blue-400 font-semibold"
               />
             </motion.div>
-            
+
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.8 }}
               className="text-lg text-gray-400 mb-8 max-w-2xl"
             >
-              Passionate about creating beautiful, functional, and user-centered digital experiences. 
-              I bring ideas to life through code and design.
+              Never hurt others, learn about science, universe and it's inception
+              aim to solve a particular hard thing in life that's my entire life
+              goal
             </motion.p>
-            
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.8 }}
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
-              <button 
+              <button
                 className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg"
-                onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() =>
+                  document
+                    .getElementById("projects")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
               >
                 View My Work
               </button>
-              <button 
+              <button
                 className="border-2 border-blue-400 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 hover:text-gray-900 transition-colors shadow-lg"
-                onClick={() => document.getElementById('resume')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() =>
+                  document
+                    .getElementById("resume")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
               >
                 Download Resume
               </button>
             </motion.div>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -113,7 +129,7 @@ const Hero = () => {
           </motion.div>
         </div>
       </div>
-      
+
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -124,9 +140,16 @@ const Hero = () => {
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
           className="cursor-pointer"
-          onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
+          onClick={() =>
+            document
+              .getElementById("about")
+              ?.scrollIntoView({ behavior: "smooth" })
+          }
         >
-          <ChevronDown size={32} className="text-gray-400 hover:text-blue-400 transition-colors" />
+          <ChevronDown
+            size={32}
+            className="text-gray-400 hover:text-blue-400 transition-colors"
+          />
         </motion.div>
       </motion.div>
     </section>

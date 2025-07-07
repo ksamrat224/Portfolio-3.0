@@ -20,7 +20,7 @@ const FallbackSphere = () => {
         {/* Profile image inside the sphere - no rotation */}
         <div className="absolute inset-0 flex items-center justify-center">
           <img
-            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80"
+            src={"public/p.jpg"}
             alt="Profile"
             className="w-48 h-48 rounded-full object-cover border-4 border-gray-600"
           />

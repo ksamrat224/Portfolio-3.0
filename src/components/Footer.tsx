@@ -7,9 +7,9 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: Github, href: 'https://github.com/johndoe', label: 'GitHub' },
-    { icon: LinkIcon, href: 'https://linkedin.com/in/johndoe', label: 'LinkedIn' },
-    { icon: Mail, href: 'mailto:john.doe@example.com', label: 'Email' },
+    { icon: Github, href: 'https://github.com/ksamrat224', label: 'GitHub' },
+    { icon: LinkIcon, href: 'https://www.linkedin.com/in/samratk225/', label: 'LinkedIn' },
+    { icon: Mail, href: 'mailto:samratkarki225@gmail.com', label: 'Email' },
   ];
 
   return (
@@ -22,7 +22,7 @@ const Footer = () => {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl font-bold mb-2">John Doe</h3>
+            <h3 className="text-2xl font-bold mb-2">samrat karki</h3>
             <p className="text-gray-400">Full Stack Developer</p>
           </motion.div>
 
@@ -60,7 +60,7 @@ const Footer = () => {
             <p className="text-gray-400 flex items-center justify-center md:justify-end">
               Made with{' '}
               <Heart className="mx-2 text-red-500" size={16} fill="currentColor" />
-              © {currentYear}
+              by Samrat karki
             </p>
           </motion.div>
         </div>

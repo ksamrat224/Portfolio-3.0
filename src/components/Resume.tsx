@@ -21,11 +21,10 @@ const Resume = () => {
   };
 
   const skills = [
-    { category: 'Frontend', items: ['React', 'TypeScript', 'Next.js', 'Vue.js', 'Angular'], level: 90 },
-    { category: 'Backend', items: ['Node.js', 'Python', 'Java', 'PHP', 'Ruby'], level: 85 },
-    { category: 'Database', items: ['MongoDB', 'PostgreSQL', 'MySQL', 'Redis'], level: 80 },
-    { category: 'DevOps', items: ['Docker', 'AWS', 'CI/CD', 'Kubernetes'], level: 75 },
-    { category: 'Design', items: ['Figma', 'Adobe XD', 'Photoshop', 'Illustrator'], level: 70 },
+    { category: 'Frontend', items: ['React', 'TypeScript','React Native'], level: 90 },
+    { category: 'Backend', items: ['Node.js', 'PHP'], level: 85 },
+    { category: 'Database', items: [ 'PostgreSQL', 'MySQL', 'Redis'], level: 80 },
+    { category: 'Design', items: ['Figma'], level: 70 },
   ];
 
   const experience = [
@@ -174,7 +173,7 @@ const Resume = () => {
                             initial={{ width: 0 }}
                             animate={inView ? { width: `${skillGroup.level}%` } : {}}
                             transition={{ delay: 0.5 + index * 0.1, duration: 1 }}
-                            className="bg-gradient-to-r from-blue-500 to-purple-600 h-2 rounded-full"
+                            className="bg-blue-700 h-2 rounded-full"
                           />
                         </div>
                         <div className="flex flex-wrap gap-2">

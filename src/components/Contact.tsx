@@ -77,19 +77,19 @@ const Contact = () => {
     {
       icon: Mail,
       label: 'Email',
-      value: 'john.doe@example.com',
+      value: 'samratkarki225@gmail.com',
       href: 'mailto:john.doe@example.com',
     },
     {
       icon: Phone,
       label: 'Phone',
-      value: '(555) 123-4567',
+      value: '(+977) 9863751850',
       href: 'tel:+15551234567',
     },
     {
       icon: MapPin,
       label: 'Location',
-      value: 'San Francisco, CA',
+      value: 'Biratnagar, Morang',
       href: 'https://maps.google.com/?q=San+Francisco,CA',
     },
   ];
@@ -98,7 +98,7 @@ const Contact = () => {
     {
       icon: Github,
       label: 'GitHub',
-      href: 'https://github.com/johndoe',
+      href: 'https://github.com/ksamrat224',
     },
     {
       icon: LinkIcon,
@@ -277,7 +277,7 @@ const Contact = () => {
                       type="number"
                       value={captchaAnswer}
                       onChange={(e) => setCaptchaAnswer(e.target.value)}
-                      className="w-20 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="Answer"
                     />
                     {watchedCaptcha === 'verified' && (

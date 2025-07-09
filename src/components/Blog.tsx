@@ -1,11 +1,17 @@
-
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import ReactMarkdown from 'react-markdown';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import { Search, Calendar, Clock, Tag, MessageCircle, ArrowLeft } from 'lucide-react';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import ReactMarkdown from "react-markdown";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
+import {
+  Search,
+  Calendar,
+  Clock,
+  Tag,
+  MessageCircle,
+  ArrowLeft,
+} from "lucide-react";
 
 const Blog = () => {
   const [ref, inView] = useInView({
@@ -14,199 +20,161 @@ const Blog = () => {
   });
 
   const [selectedPost, setSelectedPost] = useState<any>(null);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedTag, setSelectedTag] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedTag, setSelectedTag] = useState("");
 
   const blogPosts = [
     {
       id: 1,
-      title: 'Getting Started with React Hooks',
-      excerpt: 'Learn the fundamentals of React Hooks and how they can simplify your component logic.',
+      title: "Building a Community Voting Platform with React & NestJS",
+      excerpt:
+        "A deep dive into building a full-stack voting and feedback app for Nepali communities using React, NestJS, and Prisma.",
       content: `
-# Getting Started with React Hooks
+# Building a Community Voting Platform with React & NestJS
 
-React Hooks revolutionized how we write React components. Let's explore the most commonly used hooks.
+This project was aimed at empowering Nepali communities to vote and provide feedback digitally.
 
-## useState Hook
+## Tech Stack
 
-The \`useState\` hook allows you to add state to functional components:
+- **Frontend**: React, TailwindCSS
+- **Backend**: NestJS
+- **Database**: PostgreSQL with Prisma ORM
 
-\`\`\`javascript
-import React, { useState } from 'react';
+## Key Features
 
-function Counter() {
-  const [count, setCount] = useState(0);
+- Secure login & registration
+- Dynamic polls and real-time results
+- Feedback form with sentiment tagging
 
-  return (
-    <div>
-      <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>
-        Click me
-      </button>
-    </div>
-  );
-}
+## Challenges
+
+Handling nested API relationships in Prisma and ensuring real-time UI updates was tricky. I used optimistic UI updates in React and fine-tuned relations with Prisma.
+
+\`\`\`typescript
+const votes = await prisma.vote.findMany({
+  where: { pollId },
+  include: { user: true }
+});
 \`\`\`
 
-## useEffect Hook
+This kind of nested fetching helped personalize the vote dashboard per user.
 
-The \`useEffect\` hook lets you perform side effects in functional components:
+## Deployment
 
-\`\`\`javascript
-import React, { useState, useEffect } from 'react';
+The frontend was deployed using Vercel, and the backend on Render. I used env configs for security.
 
-function Example() {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    document.title = \`You clicked \${count} times\`;
-  });
-
-  return (
-    <div>
-      <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>
-        Click me
-      </button>
-    </div>
-  );
-}
-\`\`\`
-
-## Custom Hooks
-
-You can create your own hooks to share logic between components:
-
-\`\`\`javascript
-function useCounter(initialValue = 0) {
-  const [count, setCount] = useState(initialValue);
-
-  const increment = () => setCount(count + 1);
-  const decrement = () => setCount(count - 1);
-  const reset = () => setCount(initialValue);
-
-  return { count, increment, decrement, reset };
-}
-\`\`\`
-
-Hooks make React components more readable and reusable!
-      `,
-      date: '2024-01-15',
-      readTime: '5 min read',
-      tags: ['React', 'JavaScript', 'Frontend'],
-      author: 'John Doe',
-      comments: 12
+This project sharpened my full-stack thinking a lot!
+    `,
+      date: "2025-06-18",
+      readTime: "6 min read",
+      tags: ["React", "NestJS", "Prisma", "Full-stack"],
+      author: "Samrat Karki",
+      comments: 9,
     },
     {
       id: 2,
-      title: 'Building Responsive Layouts with CSS Grid',
-      excerpt: 'Master CSS Grid to create complex, responsive layouts with ease.',
+      title: "Making a Smart Recipe Planner in React",
+      excerpt:
+        "Explore how I built a drag-and-drop based meal planner with dynamic recipe search, cooking instructions, and a shopping list generator.",
       content: `
-# Building Responsive Layouts with CSS Grid
+# Making a Smart Recipe Planner in React
 
-CSS Grid is a powerful layout system that makes creating complex layouts simple and intuitive.
+This was one of my favorite projects as it combined UI/UX creativity with logic-heavy features.
 
-## Basic Grid Setup
+## Cool Features
 
-\`\`\`css
-.container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
-}
+- Drag-and-drop meal planning using \`react-beautiful-dnd\`
+- Recipe search with filters and ingredient scaling
+- Markdown support for adding your own recipes
+- Auto-generated shopping list
+
+## Code Snippet
+
+\`\`\`js
+const scaledIngredients = ingredients.map(i => ({
+  ...i,
+  quantity: i.quantity * servings
+}));
 \`\`\`
 
-## Responsive Grid
+Simple logic, but very impactful for user experience!
 
-\`\`\`css
-.responsive-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 20px;
-}
-\`\`\`
+## Tools I Used
 
-This creates a responsive grid that automatically adjusts the number of columns based on available space.
-      `,
-      date: '2024-01-10',
-      readTime: '7 min read',
-      tags: ['CSS', 'Web Design', 'Responsive'],
-      author: 'John Doe',
-      comments: 8
+- React, React Router, TailwindCSS
+- Framer Motion for transitions
+- TipTap for recipe editing UI
+
+It helped me understand how UI interactivity affects user satisfaction.
+    `,
+      date: "2025-06-25",
+      readTime: "5 min read",
+      tags: ["React", "Meal Planning", "UX"],
+      author: "Samrat Karki",
+      comments: 5,
     },
     {
       id: 3,
-      title: 'TypeScript Best Practices for React Developers',
-      excerpt: 'Improve your React development with TypeScript best practices and patterns.',
+      title: "My Portfolio Website Setup: From React to Framer Motion",
+      excerpt:
+        "How I built a performant, animated personal portfolio using React, MDX, and Framer Motion.",
       content: `
-# TypeScript Best Practices for React Developers
+# My Portfolio Website Setup
 
-TypeScript adds type safety to your React applications. Here are some best practices.
+I created my personal portfolio to showcase my projects, skills, and resume—all in a single-page React app.
 
-## Defining Component Props
+## Stack
 
-\`\`\`typescript
-interface ButtonProps {
-  children: React.ReactNode;
-  onClick: () => void;
-  variant?: 'primary' | 'secondary';
-  disabled?: boolean;
-}
+- React + Vite
+- TailwindCSS
+- Framer Motion for animations
+- MDX + \`react-markdown\` for blogs
+- react-three-fiber for subtle 3D effects
 
-const Button: React.FC<ButtonProps> = ({ 
-  children, 
-  onClick, 
-  variant = 'primary',
-  disabled = false 
-}) => {
-  return (
-    <button 
-      onClick={onClick}
-      disabled={disabled}
-      className={\`btn btn-\${variant}\`}
-    >
-      {children}
-    </button>
-  );
-};
+## Highlights
+
+- Hero & About sections with animated transitions
+- Blog section that renders Markdown content
+- Interactive project cards with tilt & hover effects
+
+## Sample
+
+\`\`\`js
+<motion.div
+  initial={{ opacity: 0, y: 30 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6 }}
+>
+  <ProjectCard />
+</motion.div>
 \`\`\`
 
-## Using Generic Types
+This gave the portfolio a smooth, modern feel.
 
-\`\`\`typescript
-interface ApiResponse<T> {
-  data: T;
-  status: number;
-  message: string;
-}
+## Deployment
 
-const fetchData = async <T>(url: string): Promise<ApiResponse<T>> => {
-  const response = await fetch(url);
-  return response.json();
-};
-\`\`\`
-
-TypeScript helps catch errors early and improves developer experience!
-      `,
-      date: '2024-01-05',
-      readTime: '6 min read',
-      tags: ['TypeScript', 'React', 'Best Practices'],
-      author: 'John Doe',
-      comments: 15
+Deployed on Vercel with automatic GitHub integration. It's now my favorite personal project.
+    `,
+      date: "2025-07-01",
+      readTime: "4 min read",
+      tags: ["React", "Framer Motion", "Portfolio"],
+      author: "Samrat Karki",
+      comments: 3,
     },
   ];
 
-  const allTags = Array.from(new Set(blogPosts.flatMap(post => post.tags)));
+  const allTags = Array.from(new Set(blogPosts.flatMap((post) => post.tags)));
 
-  const filteredPosts = blogPosts.filter(post => {
-    const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         post.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesTag = selectedTag === '' || post.tags.includes(selectedTag);
+  const filteredPosts = blogPosts.filter((post) => {
+    const matchesSearch =
+      post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      post.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesTag = selectedTag === "" || post.tags.includes(selectedTag);
     return matchesSearch && matchesTag;
   });
 
   const CodeBlock = ({ node, inline, className, children, ...props }: any) => {
-    const match = /language-(\w+)/.exec(className || '');
+    const match = /language-(\w+)/.exec(className || "");
     return !inline && match ? (
       <SyntaxHighlighter
         style={vscDarkPlus}
@@ -214,7 +182,7 @@ TypeScript helps catch errors early and improves developer experience!
         PreTag="div"
         {...props}
       >
-        {String(children).replace(/\n$/, '')}
+        {String(children).replace(/\n$/, "")}
       </SyntaxHighlighter>
     ) : (
       <code className={className} {...props}>
@@ -242,8 +210,10 @@ TypeScript helps catch errors early and improves developer experience!
 
             <article className="bg-white rounded-lg shadow-lg overflow-hidden">
               <div className="p-8">
-                <h1 className="text-4xl font-bold text-gray-900 mb-4">{selectedPost.title}</h1>
-                
+                <h1 className="text-4xl font-bold text-gray-900 mb-4">
+                  {selectedPost.title}
+                </h1>
+
                 <div className="flex items-center text-gray-600 mb-6 space-x-6">
                   <div className="flex items-center space-x-2">
                     <Calendar size={16} />
@@ -279,30 +249,6 @@ TypeScript helps catch errors early and improves developer experience!
                     {selectedPost.content}
                   </ReactMarkdown>
                 </div>
-
-                {/* Simulated Comments Section */}
-                <div className="mt-12 pt-8 border-t border-gray-200">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-6">Comments ({selectedPost.comments})</h3>
-                  <div className="space-y-6">
-                    {[1, 2, 3].map((i) => (
-                      <div key={i} className="bg-gray-50 p-6 rounded-lg">
-                        <div className="flex items-center space-x-3 mb-3">
-                          <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white text-sm font-semibold">
-                            U{i}
-                          </div>
-                          <div>
-                            <div className="font-semibold text-gray-900">User {i}</div>
-                            <div className="text-sm text-gray-600">2 days ago</div>
-                          </div>
-                        </div>
-                        <p className="text-gray-700">
-                          Great article! This really helped me understand the concepts better. 
-                          Looking forward to more content like this.
-                        </p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
               </div>
             </article>
           </motion.div>
@@ -323,7 +269,8 @@ TypeScript helps catch errors early and improves developer experience!
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Blog</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Thoughts, tutorials, and insights about web development and technology
+              Thoughts, tutorials, and insights about web development and
+              technology
             </p>
           </div>
 
@@ -331,7 +278,10 @@ TypeScript helps catch errors early and improves developer experience!
           <div className="max-w-4xl mx-auto mb-12">
             <div className="flex flex-col md:flex-row gap-4 mb-6">
               <div className="relative flex-1">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
+                <Search
+                  className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+                  size={20}
+                />
                 <input
                   type="text"
                   placeholder="Search posts..."
@@ -347,7 +297,9 @@ TypeScript helps catch errors early and improves developer experience!
               >
                 <option value="">All Tags</option>
                 {allTags.map((tag) => (
-                  <option key={tag} value={tag}>{tag}</option>
+                  <option key={tag} value={tag}>
+                    {tag}
+                  </option>
                 ))}
               </select>
             </div>
@@ -356,11 +308,11 @@ TypeScript helps catch errors early and improves developer experience!
               {allTags.map((tag) => (
                 <button
                   key={tag}
-                  onClick={() => setSelectedTag(selectedTag === tag ? '' : tag)}
+                  onClick={() => setSelectedTag(selectedTag === tag ? "" : tag)}
                   className={`px-3 py-1 rounded-full text-sm transition-colors ${
                     selectedTag === tag
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-white text-gray-700 hover:bg-gray-100'
+                      ? "bg-blue-600 text-white"
+                      : "bg-white text-gray-700 hover:bg-gray-100"
                   }`}
                 >
                   <Tag size={12} className="inline mr-1" />
@@ -386,7 +338,7 @@ TypeScript helps catch errors early and improves developer experience!
                     {post.title}
                   </h3>
                   <p className="text-gray-600 mb-4">{post.excerpt}</p>
-                  
+
                   <div className="flex items-center text-sm text-gray-500 mb-4 space-x-4">
                     <div className="flex items-center space-x-1">
                       <Calendar size={14} />
@@ -401,7 +353,7 @@ TypeScript helps catch errors early and improves developer experience!
                       <span>{post.comments}</span>
                     </div>
                   </div>
-                  
+
                   <div className="flex flex-wrap gap-2 mb-4">
                     {post.tags.slice(0, 3).map((tag) => (
                       <span
@@ -412,9 +364,11 @@ TypeScript helps catch errors early and improves developer experience!
                       </span>
                     ))}
                   </div>
-                  
+
                   <div className="flex justify-between items-center">
-                    <span className="text-sm text-gray-600">By {post.author}</span>
+                    <span className="text-sm text-gray-600">
+                      By {post.author}
+                    </span>
                     <span className="text-blue-600 text-sm font-medium hover:text-blue-800">
                       Read More →
                     </span>
@@ -426,7 +380,9 @@ TypeScript helps catch errors early and improves developer experience!
 
           {filteredPosts.length === 0 && (
             <div className="text-center py-12">
-              <p className="text-gray-600 text-lg">No posts found matching your criteria.</p>
+              <p className="text-gray-600 text-lg">
+                No posts found matching your criteria.
+              </p>
             </div>
           )}
         </motion.div>

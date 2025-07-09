@@ -19,7 +19,7 @@ const FallbackSphere = () => {
       >
         <div className="absolute inset-0 flex items-center justify-center">
           <img
-            src={"public/p.jpg"}
+            src={"p.jpg"}
             alt="Profile"
             className="w-48 h-48 rounded-full object-cover border-4 border-gray-600"
           />

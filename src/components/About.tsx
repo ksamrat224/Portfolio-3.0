@@ -84,7 +84,7 @@ const About = () => {
                         initial={{ width: 0 }}
                         animate={inView ? { width: `${skill.percentage}%` } : {}}
                         transition={{ delay: 0.5 + index * 0.1, duration: 1 }}
-                        className="bg-gradient-to-r from-blue-500 to-purple-600 h-2 rounded-full"
+                        className="bg-blue-700 h-2 rounded-full"
                       />
                     </div>
                   </div>

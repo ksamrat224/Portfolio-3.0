@@ -18,52 +18,49 @@ const Projects = () => {
     {
       id: 1,
       title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce solution with React, Node.js, and MongoDB',
-      category: 'full-stack',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-      image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&q=80',
-      github: 'https://github.com/johndoe/ecommerce',
-      demo: 'https://ecommerce-demo.com',
+      description: 'A UI riched e-commerce platform made using React and Redux',
+      category: 'frontend',
+      technologies: ['React', 'Redux', 'Tailwind CSS'],
+      image: 'https://s.tmimgcdn.com/scr/800x500/349700/ecommerce-website-landing-page-ui-design_349788-original.jpg',
+      github: 'https://github.com/ksamrat224/e-commerce',
+      demo: 'https://e-commerce-bzzq.vercel.app/',
       features: [
         'User authentication and authorization',
         'Shopping cart and checkout system',
         'Payment integration with Stripe',
-        'Admin dashboard for inventory management',
         'Responsive design for all devices'
       ]
     },
     {
       id: 2,
-      title: 'Task Management App',
-      description: 'A collaborative task management application with real-time updates',
-      category: 'frontend',
-      technologies: ['React', 'TypeScript', 'Socket.io', 'Tailwind CSS'],
-      image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?auto=format&fit=crop&w=800&q=80',
-      github: 'https://github.com/johndoe/task-manager',
-      demo: 'https://task-manager-demo.com',
+      title: 'Library Management System',
+      description: 'A management application with real-time updates that allows users to manage books, members and transactions.',
+      category: 'full-stack',
+      technologies: ['React', 'TypeScript', 'NestJs', 'Tailwind CSS'],
+      image: 'https://cdn.dribbble.com/userupload/3741461/file/original-c64eebecdb8ed04bb975075ab279d1f1.png?format=webp&resize=400x300&vertical=center',
+      github: 'https://github.com/ksamrat224/LMS',
+      demo: 'https://',
       features: [
-        'Real-time collaboration',
-        'Drag and drop interface',
-        'Team management',
-        'Progress tracking',
-        'Dark mode support'
+        'User authentication and role management',
+        'Book search and filtering',
+        'Drag-and-drop book management',
+        'Mobile-friendly interface'
       ]
     },
     {
       id: 3,
-      title: 'Weather Analytics Dashboard',
-      description: 'Data visualization dashboard for weather analytics',
+      title: 'DineTime App',
+      description: 'A restaurant reservation app that allows users to book tables, view menus, and manage reservations.',
       category: 'data-viz',
-      technologies: ['React', 'D3.js', 'Python', 'FastAPI'],
-      image: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?auto=format&fit=crop&w=800&q=80',
-      github: 'https://github.com/johndoe/weather-dashboard',
+      technologies: ['React Native', 'Firebase', 'Tailwind CSS'],
+      image: 'https://cdn.dribbble.com/userupload/42506411/file/original-82e9932029785949f8177f925dce054c.png',
+      github: 'https://github.com/ksamrat224/ReactNative',
       demo: 'https://weather-dashboard-demo.com',
       features: [
-        'Interactive charts and graphs',
-        'Historical data analysis',
-        'Weather forecasting',
-        'Export functionality',
-        'Mobile responsive design'
+        'Real-time table availability updates',
+        'Menu browsing and ordering',
+        'Reservation management',
+        'Push notifications for reservation reminders'
       ]
     },
   ];
@@ -72,7 +69,7 @@ const Projects = () => {
     { id: 'all', label: 'All Projects' },
     { id: 'full-stack', label: 'Full Stack' },
     { id: 'frontend', label: 'Frontend' },
-    { id: 'data-viz', label: 'Data Visualization' },
+    { id: 'backend', label: 'Backend' },
   ];
 
   const filteredProjects = filter === 'all' 

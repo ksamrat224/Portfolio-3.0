@@ -34,7 +34,7 @@ const FallbackSphere = () => {
 
 const Hero = () => {
   const skills = [
-    "Cross-Platform App Developer",
+    "Mobile App Developer",
     "React & Laravel Developer",
     "Tech Enthusiast",
   ];

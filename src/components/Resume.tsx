@@ -127,21 +127,21 @@ const Resume = () => {
               className="bg-gray-50 rounded-lg p-8 mb-8"
             >
               <div className="text-center mb-6">
-                <h3 className="text-3xl font-bold text-gray-900 mb-2">John Doe</h3>
-                <p className="text-xl text-blue-600 mb-4">Senior Full Stack Developer</p>
+                <h3 className="text-3xl font-bold text-gray-900 mb-2">Samrat Karki</h3>
+                <p className="text-xl text-blue-600 mb-4">Junior Full Stack Developer</p>
               </div>
               <div className="grid md:grid-cols-3 gap-4 text-center">
                 <div className="flex items-center justify-center space-x-2">
                   <Mail size={16} className="text-gray-600" />
-                  <span className="text-gray-700">john.doe@example.com</span>
+                  <span className="text-gray-700">samratkarki225@gmail.com</span>
                 </div>
                 <div className="flex items-center justify-center space-x-2">
                   <Phone size={16} className="text-gray-600" />
-                  <span className="text-gray-700">(555) 123-4567</span>
+                  <span className="text-gray-700">(+977) 9863751850</span>
                 </div>
                 <div className="flex items-center justify-center space-x-2">
                   <MapPin size={16} className="text-gray-600" />
-                  <span className="text-gray-700">San Francisco, CA</span>
+                  <span className="text-gray-700">Biratnagar , Morang</span>
                 </div>
               </div>
             </motion.div>

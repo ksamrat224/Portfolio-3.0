@@ -28,69 +28,41 @@ const Resume = () => {
   ];
 
   const experience = [
+   
     {
-      title: 'Senior Full Stack Developer',
-      company: 'TechCorp Inc.',
-      location: 'San Francisco, CA',
-      period: '2022 - Present',
-      description: 'Led development of scalable web applications serving 100k+ users. Implemented microservices architecture and improved performance by 40%.',
-      achievements: [
-        'Architected and built a real-time collaboration platform',
-        'Mentored 5 junior developers and established coding standards',
-        'Reduced application load time by 40% through optimization',
-        'Implemented automated testing pipeline with 95% code coverage'
-      ]
-    },
-    {
-      title: 'Full Stack Developer',
-      company: 'StartupXYZ',
-      location: 'Austin, TX',
-      period: '2020 - 2022',
-      description: 'Developed and maintained multiple client projects using React, Node.js, and AWS. Collaborated with design team to implement pixel-perfect UIs.',
-      achievements: [
-        'Built and deployed 15+ client projects',
-        'Integrated payment systems and third-party APIs',
-        'Implemented responsive designs for mobile and desktop',
-        'Optimized database queries reducing response time by 60%'
-      ]
-    },
-    {
-      title: 'Junior Developer',
-      company: 'WebSolutions',
-      location: 'Dallas, TX',
-      period: '2019 - 2020',
-      description: 'Focused on frontend development using React and Vue.js. Gained experience in agile development methodologies.',
+      title: 'Junior Full Stack Intern',
+      company: 'Rato Guras Technology',
+      location: 'Kanepokhari, Morang',
+      period: '2025 April-Present',
+      description: 'Focused on frontend development using React and React Native and backend development using Laravel. Gained experience in agile development methodologies.',
       achievements: [
         'Developed reusable component libraries',
-        'Participated in code reviews and pair programming',
-        'Contributed to open-source projects',
-        'Completed AWS certification'
+        'Implemented responsive design principles',
+        'Contributed to the development of a mobile application using React Native',
       ]
     }
   ];
 
   const education = [
     {
-      degree: 'Bachelor of Science in Computer Science',
-      school: 'University of Texas at Austin',
-      period: '2015 - 2019',
-      gpa: '3.8/4.0',
-      relevant: ['Data Structures & Algorithms', 'Software Engineering', 'Database Systems', 'Web Development']
+      degree: 'Bachelor of Science in Computer Science and Information Technology',
+      school: 'Tribhuvan University',
+      period: '2022 - 2026',
+      gpa: '3.3/4.0',
+      relevant: ['Data Structures & Algorithms','Design and Analysis of Algorithms','Software Engineering', 'Database Systems', 'Web Development']
     }
   ];
 
   const certifications = [
-    'AWS Certified Solutions Architect',
-    'Google Cloud Professional Developer',
-    'MongoDB Certified Developer',
-    'Scrum Master Certification'
+    'Full Stack Web Development Bootcamp',
+    
   ];
 
   const handleDownload = () => {
-    // Simulate PDF download
+    // will link later on
     const link = document.createElement('a');
     link.href = '#';
-    link.download = 'john-doe-resume.pdf';
+    link.download = 'samrat-resume.pdf';
     link.click();
   };
 

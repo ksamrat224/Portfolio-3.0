@@ -90,7 +90,7 @@ const Contact = () => {
       icon: MapPin,
       label: 'Location',
       value: 'Biratnagar, Morang',
-      href: 'https://maps.google.com/?q=San+Francisco,CA',
+      href: 'https://maps.app.goo.gl/WmyYgepqUknQBFMy7',
     },
   ];
 

@@ -5,8 +5,8 @@ import { ChevronDown } from "lucide-react";
 
 const FallbackSphere = () => {
   return (
-    <div className="w-full h-full flex items-center justify-center">
-      <motion.div
+    <div className="w-full h-full flex items-center justify-center ml-8 mt-6">
+      {/* <motion.div
         animate={{
           scale: [1, 1.1, 1],
         }}
@@ -15,17 +15,19 @@ const FallbackSphere = () => {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="w-64 h-64 rounded-full bg-gradient-to-br from-gray-800 to-gray-900 opacity-90 relative overflow-hidden border-4 border-gray-700 shadow-2xl"
-      >
+        className="w-96 h-96 rounded-full bg-gradient-to-br from-gray-800 to-gray-900 opacity-90 relative overflow-hidden border-4 border-gray-700 shadow-2xl"
+      > */}
+      <div className="w-96 h-96 rounded-full bg-gradient-to-br from-gray-800 to-gray-900 opacity-90 relative overflow-hidden border-4 border-gray-700 shadow-2xl">
         <div className="absolute inset-0 flex items-center justify-center">
           <img
-            src={"p.jpg"}
+            src={"imagee.jpg"}
             alt="Profile"
-            className="w-48 h-48 rounded-full object-cover border-4 border-gray-600"
+            className="w-80 h-80 rounded-full object-cover border-4 border-gray-600"
           />
         </div>
         <div className="absolute inset-0 bg-gradient-to-br from-gray-800/30 to-transparent rounded-full" />
-      </motion.div>
+      </div>
+      {/* </motion.div> */}
     </div>
   );
 };
@@ -83,7 +85,9 @@ const Hero = () => {
               transition={{ delay: 0.6, duration: 0.8 }}
               className="text-lg text-gray-400 mb-8 max-w-2xl"
             >
-             "Never hurt others. Learn about science, the universe, and its inception. Aim to solve a particularly hard problem in life. That is my entire life goal."
+              "Never hurt others. Learn about science, the universe, and its
+              inception. Aim to solve a particularly hard problem in life. That
+              is my entire life goal."
             </motion.p>
 
             <motion.div

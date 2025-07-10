@@ -223,10 +223,7 @@ Deployed on Vercel with automatic GitHub integration. It's now my favorite perso
                     <Clock size={16} />
                     <span>{selectedPost.readTime}</span>
                   </div>
-                  <div className="flex items-center space-x-2">
-                    <MessageCircle size={16} />
-                    <span>{selectedPost.comments} comments</span>
-                  </div>
+                 
                 </div>
 
                 <div className="flex flex-wrap gap-2 mb-8">

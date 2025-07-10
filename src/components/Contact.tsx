@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useForm } from 'react-hook-form';
@@ -7,6 +7,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { Mail, Phone, MapPin, Send, CheckCircle, XCircle, Github, Link as LinkIcon } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
+import emailjs from 'emailjs-com';
 
 const contactSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
@@ -30,6 +31,10 @@ const Contact = () => {
     const num2 = Math.floor(Math.random() * 10) + 1;
     return { question: `${num1} + ${num2}`, answer: num1 + num2 };
   });
+  useEffect(() => {
+  emailjs.init("HIUzIU845h-Lwue6I");
+}, []);
+
 
   const {
     register,
@@ -53,25 +58,37 @@ const Contact = () => {
   }, [captchaAnswer, captchaQuestion.answer, setValue]);
 
   const onSubmit = async (data: ContactFormData) => {
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      toast({
-        title: "Message sent successfully!",
-        description: "Thank you for your message. I'll get back to you soon.",
-      });
-      
-      reset();
-      setCaptchaAnswer('');
-    } catch (error) {
-      toast({
-        title: "Failed to send message",
-        description: "Please try again later or contact me directly.",
-        variant: "destructive",
-      });
-    }
-  };
+  try {
+    const serviceId = "service_kk1xpdg";
+    const templateId = "template_zx3ysmh";
+    const publicKey = "HIUzIU845h-Lwue6I";
+
+    const templateParams = {
+      name: data.name,
+      email: data.email,
+      subject: data.subject,
+      message: data.message,
+    };
+
+    await emailjs.send(serviceId, templateId, templateParams, publicKey);
+
+    toast({
+      title: "Message sent successfully!",
+      description: "Thank you for your message. I'll get back to you soon.",
+    });
+
+    reset();
+    setCaptchaAnswer('');
+  } catch (error) {
+    console.error("EmailJS Error:", error);
+    toast({
+      title: "Failed to send message",
+      description: "Please try again later or contact me directly.",
+      variant: "destructive",
+    });
+  }
+};
+
 
   const contactInfo = [
     {
@@ -107,6 +124,8 @@ const Contact = () => {
     },
   ];
 
+  
+  
   return (
     <section id="contact" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">

@@ -61,7 +61,7 @@ const Hero = () => {
               className="text-5xl lg:text-7xl font-bold text-white mb-6"
             >
               Hi, I'm{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">
                 Samrat Karki
               </span>
             </motion.h1>

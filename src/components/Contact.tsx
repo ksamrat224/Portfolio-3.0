@@ -5,7 +5,7 @@ import { useInView } from 'react-intersection-observer';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import { Mail, Phone, MapPin, Send, CheckCircle, XCircle, Github, Link as LinkIcon } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, CheckCircle, XCircle, Github, Link as LinkIcon,Instagram ,X} from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
 import emailjs from 'emailjs-com';
 
@@ -120,8 +120,19 @@ const Contact = () => {
     {
       icon: LinkIcon,
       label: 'LinkedIn',
-      href: 'https://linkedin.com/in/johndoe',
+      href: 'https://linkedin.com/in/samratk225',
     },
+     {
+    icon: Instagram,
+    label: 'Instagram',
+    href: 'https://instagram.com/samrat_k26',
+  },
+  {
+    icon: X,
+    label: 'X',
+    href: 'https://x.com/ksamrat224',
+  }
+   
   ];
 
   
